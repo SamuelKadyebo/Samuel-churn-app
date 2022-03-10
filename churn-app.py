@@ -19,7 +19,7 @@ Customer data.  Here customer churn means the customer does not make
 another purchase after a period of time.
 """)
 # Allowing Users To Download Data
-df_selected=pd.read_csv(r"C:\Users\SKadyebo\Desktop\SMU\Python\telco_churn.csv")
+df_selected=pd.read_csv(r"telco_churn.csv")
 df_selected=df_selected.rename(columns={'SeniorCitizen':'target'})
 df_selected_all=df_selected[['gender', 'Partner', 'Dependents', 'PhoneService', 'tenure', 'MonthlyCharges', 'target']].copy()
 
@@ -62,7 +62,7 @@ else:
         return features
     input_df=user_input_features()
 # Read in data
-churn_raw=pd.read_csv(r'C:\Users\SKadyebo\Desktop\SMU\Python\telco_churn.csv')
+churn_raw=pd.read_csv(r'telco_churn.csv')
 churn_raw.fillna(0, inplace=True)
 churn=churn_raw.drop(columns=['Churn'])
 df=pd.concat([input_df,churn],axis=0)
