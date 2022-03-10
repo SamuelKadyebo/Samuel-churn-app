@@ -5,9 +5,11 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 import csv
 
+
+
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
-df_churn=pd.read_csv(r"C:\Users\SKadyebo\Desktop\SMU\Python\telco_churn.csv")
+df_churn=pd.read_csv(r"telco_churn.csv")
 df_churn=df_churn[['gender', 'PaymentMethod', 'MonthlyCharges', 'tenure', 'Churn']].copy()
 #df_churn['MonthlyCharges'] = df_churn['MonthlyCharges'].map('${:,.2f}'.format)
 
