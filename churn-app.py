@@ -6,6 +6,10 @@ import base64
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+
+
 st.write("""
 # Churn Prediction App
 
@@ -32,14 +36,14 @@ def filedownload(df):
 download="churn_data.csv">Download CSV File</a>'''
     return href
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
+#st.set_option('deprecation.showPyplotGlobalUse', False)
 
-# st.markdown(filedownload(df_selected_all), unsafe_allow_html=True)
+#st.markdown(filedownload(df_selected_all), unsafe_allow_html=True)
     
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.markdown(filedownload(df_selected_all), unsafe_allow_html=True)
-def user_input_features():
-    pass
+#def user_input_features():
+ #   pass
     
 uploaded_file=st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
 if uploaded_file is not None:
